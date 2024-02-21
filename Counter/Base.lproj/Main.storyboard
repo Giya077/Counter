@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,47 +15,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4q-Y1-e0K">
-                                <rect key="frame" x="51" y="642" width="84" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="+" buttonSize="medium"/>
-                                <connections>
-                                    <action selector="plusButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwM-bU-hDl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-0F-b8F">
-                                <rect key="frame" x="155" y="642" width="84" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="-" buttonSize="medium"/>
-                                <connections>
-                                    <action selector="minusBottonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0M7-eQ-pwE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-OT-NCp">
-                                <rect key="frame" x="261" y="642" width="84" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="0" buttonSize="medium"/>
-                                <connections>
-                                    <action selector="zetoButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jvc-hr-Ul6"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7h-rG-YmT">
-                                <rect key="frame" x="39" y="234" width="316" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7h-rG-YmT">
+                                <rect key="frame" x="20" y="239" width="353" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" red="0.94117647410000005" green="0.93725490570000003" blue="0.93725490570000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDb-3v-uMS">
+                                <rect key="frame" x="20" y="683.66666666666663" width="353" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P4q-Y1-e0K">
+                                        <rect key="frame" x="0.0" y="0.0" width="103.66666666666667" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="+" buttonSize="medium"/>
+                                        <connections>
+                                            <action selector="plusButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iYd-eh-gPx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ay-0F-b8F">
+                                        <rect key="frame" x="124.66666666666666" y="0.0" width="103.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="-" buttonSize="medium"/>
+                                        <connections>
+                                            <action selector="minusBottonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0M7-eQ-pwE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ED-OT-NCp">
+                                        <rect key="frame" x="249.33333333333329" y="0.0" width="103.66666666666666" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="tinted" title="0" buttonSize="medium"/>
+                                        <connections>
+                                            <action selector="zetoButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jvc-hr-Ul6"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f7h-rG-YmT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="9aA-ck-MRr"/>
+                            <constraint firstItem="f7h-rG-YmT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JxG-gN-6wM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hDb-3v-uMS" secondAttribute="trailing" constant="20" id="TN3-a2-PQq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hDb-3v-uMS" secondAttribute="bottom" constant="100" id="Tz6-FE-eiL"/>
+                            <constraint firstItem="hDb-3v-uMS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aOD-QV-gGd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f7h-rG-YmT" secondAttribute="trailing" constant="20" id="dfT-ul-zFr"/>
+                            <constraint firstItem="hDb-3v-uMS" firstAttribute="top" relation="greaterThanOrEqual" secondItem="f7h-rG-YmT" secondAttribute="bottom" constant="180" id="xov-ad-EE3"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttom" destination="P4q-Y1-e0K" id="5mf-mz-Iee"/>
                         <outlet property="buttonMinus" destination="8Ay-0F-b8F" id="QPq-Oe-qnh"/>
+                        <outlet property="buttonPlus" destination="P4q-Y1-e0K" id="mhx-mb-C23"/>
                         <outlet property="counterLabel" destination="f7h-rG-YmT" id="HpD-n6-9Oz"/>
                         <outlet property="zeroButton" destination="2ED-OT-NCp" id="Gu0-OB-ViQ"/>
                     </connections>

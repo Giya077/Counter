@@ -9,25 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet private weak var buttom: UIButton! //если меняю в коде имя на с buttom на button выдает ошибку Thread 1: "[<Counter.ViewController 0x10de0a460> setValue:forUndefinedKey:]: this class is not key value coding-compliant for the key buttom." Как я понял после изменения он жалуеться на аутлет, как отредактировать на имя которое исплавляю не разобрался в самом аутлете. По этому оставил так как есть с кривым но рабочим названием))))
+    @IBOutlet private weak var buttonPlus: UIButton!
     
-    @IBOutlet private   weak var buttonMinus: UIButton!
+    @IBOutlet private weak var buttonMinus: UIButton!
     
     @IBOutlet private weak var zeroButton: UIButton!
     
     @IBOutlet private var counterLabel: UILabel!
     
-    var counter = 0
+    private let start = "История изменений"
     
+    private var counter = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let start = "История изменений" // хотел бы сделать тип доступа приватным т.к не вижу смысла в дальнейшем использовании но не получилось.
         counterLabel.text = start
-    
-//        updateCounterLabel()
-        
-        buttom.tintColor = .red
+        buttonPlus.tintColor = .red
         buttonMinus.tintColor = .blue
         counterLabel.textColor = .black
     }
@@ -37,6 +34,7 @@ class ViewController: UIViewController {
         updateCounterLabel()
         print("плюс")
     }
+    
     @IBAction private func minusBottonTap(_ sender: UIButton) {
         if counter > 0 {
             counter -= 1
@@ -44,11 +42,13 @@ class ViewController: UIViewController {
             print("минус")
         }
     }
+    
     @IBAction private func zetoButtonTap(_ sender: UIButton) {
         counter = 0
         updateCounterLabel()
         print("Zero")
     }
+    
   private func updateCounterLabel() {
         let dateFormater = DateFormatter()
         dateFormater.dateFormat = "dd.MM.yyyy HH:mm:ss"
